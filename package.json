@@ -22,14 +22,11 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "^20.10.3",
-    "sass": "^1.69.5",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.0",
+    "@types/node": "^20.11.25",
+    "sass": "^1.71.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.5",
     "vite-plugin-svgr": "^4.2.0",
     "vite-userscript-plugin": "^1.10.0"
-  },
-  "dependencies": {
-    "react": "^18.2.0"
   }
 }

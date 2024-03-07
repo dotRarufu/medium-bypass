@@ -8,7 +8,7 @@ export default defineConfig((config) => {
     plugins: [
       svgr(),
       Userscript({
-        entry: "src/index.tsx",
+        entry: "src/index.ts",
         header: {
           name,
           version,
@@ -175,6 +175,7 @@ export default defineConfig((config) => {
             "*://*.wired.com/*",
             "*://*.wsj.com/*",
             "*://*.zeit.de/*",
+            "*://*/*",
           ],
         },
         server: {

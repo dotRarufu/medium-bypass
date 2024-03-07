@@ -6,7 +6,6 @@
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "moduleResolution": "node",
-    "jsx": "react-jsx",
     "types": ["vite-userscript-plugin/types/tampermonkey"]
   },
   "include": ["src/**/*"]
