@@ -1,20 +1,12 @@
 import { defineConfig } from "vite";
-import Userscript from "vite-userscript-plugin";
-import svgr from "vite-plugin-svgr";
-import { name, version, description, author } from "./package.json";
+import monkey from "vite-plugin-monkey";
 
 export default defineConfig((config) => {
   return {
     plugins: [
-      svgr(),
-      Userscript({
+      monkey({
         entry: "src/index.ts",
-        header: {
-          name,
-          version,
-          description,
-          author,
-          homepage: "https://github.com/xiaotianxt/medium-bypass",
+        userscript: {
           match: [
             "*://*.adelaidenow.com.au/*",
             "*://*.adweek.com/*",
@@ -178,17 +170,7 @@ export default defineConfig((config) => {
             "*://*/*",
           ],
         },
-        server: {
-          port: 3000,
-        },
       }),
     ],
-    define: {
-      "process.env": process.env,
-    },
-    build: {
-      // remove minification, sqeeze, and so on
-      minify: "esbuild",
-    },
   };
 });
